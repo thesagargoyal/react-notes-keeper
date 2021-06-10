@@ -8,7 +8,7 @@
 
 .header {
   width: 100%;
-  line-height: 100px;
+  line-height: 50px;
   background-color: #f5ba13;
   display: flex;
   justify-content: start;
@@ -142,4 +142,24 @@ footer {
   width: 100%;
   position: absolute;
 
+}
+
+@media only screen and (max-width: 685px) {
+  .main_note {
+    width: 300px;
+    margin: auto;
+  }
+  .MuiButton-root{
+    left: 200px;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .main_note {
+    width: 250px;
+    margin: auto;
+  }
+  .MuiButton-root{
+    left: 150px;
+  }
 }

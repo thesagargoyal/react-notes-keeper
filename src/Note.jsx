@@ -1,21 +1,22 @@
 import React from 'react';
-import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline'
 
-const Note = () => {
+const Note = (props) => {
 
-    return ( 
-        <>
-        <div className="note">
-            <h1>Title</h1>
-            <br />
-            <p> This is the content </p>
-            <button className="btn">
-            <DeleteOutlineIcon className="deleteIcon" />
-            </button>       
-        </div>
-        </> 
-    );
+    const deleteNote = ()=>{
+        props.deleteItem(props.id);
+    }
 
+    return <>
+    <div className="note">
+    <h1>{props.title}</h1>
+    <br />
+    <p>{props.content}</p>
+    <button className="btn" onClick={deleteNote}>
+    <DeleteOutlineIcon className="deleteIcon" />
+    </button>
+    </div>
+    </> 
 }
 
 export default Note;
